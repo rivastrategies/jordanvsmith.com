@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jordan V. Smith | Riva Strategies</title>
+  <meta name="description" content="Contact card for Jordan V. Smith, Founder of Riva Strategies and Fractional Sales & Marketing Director.">
+  <style>
+    :root {
+      color-scheme: light;
+      --accent: #0b1f3a;
+      --accent-contrast: #ffffff;
+      --secondary: #f1f3f5;
+      --text-primary: #111111;
+      --text-secondary: #4a4a4a;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px 18px;
+    }
+    .card {
+      width: min(520px, 100%);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .identity {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .identity img {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .identity h1 {
+      font-size: 1.5rem;
+      margin: 0 0 4px;
+    }
+    .identity .role {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .identity .subtext {
+      margin: 8px 0 0;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .logo img {
+      max-width: 120px;
+      max-height: 36px;
+      object-fit: contain;
+      opacity: 0.55;
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .action {
+      display: inline-block;
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: transform 0.1s ease;
+      background: var(--secondary);
+      color: var(--text-primary);
+    }
+    .action:active {
+      transform: scale(0.98);
+    }
+    .action.primary {
+      background: var(--accent);
+      color: var(--accent-contrast);
+      font-size: 1.05rem;
+      padding: 16px 18px;
+    }
+    @media (max-width: 480px) {
+      body {
+        padding: 28px 14px;
+      }
+      .identity {
+        grid-template-columns: 80px 1fr;
+        gap: 16px;
+      }
+      .identity img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <section class="identity">
+      <img src="/assets/jordan.jpg" alt="Portrait of Jordan V. Smith">
+      <div>
+        <h1>Jordan V. Smith</h1>
+        <p class="role">Founder, Riva Strategies&nbsp;|&nbsp;Fractional Sales &amp; Marketing Director</p>
+        <p class="subtext">I build and execute revenue growth systems for hospitality, service, and local market leaders.</p>
+      </div>
+    </section>
+    <aside class="logo">
+      <img src="/assets/riva-logo.png" alt="Riva Strategies logo">
+    </aside>
+    <nav class="actions" aria-label="Primary contact actions">
+      <a class="action primary" href="/jordan.vcf" download>Save Contact</a>
+      <a class="action" href="tel:8323884600">Call</a>
+      <a class="action" href="sms:8323884600">Text</a>
+      <a class="action" href="tel:8329050570">Call Office</a>
+      <a class="action" href="mailto:rivastrategies@gmail.com">Email</a>
+      <a class="action" href="https://rivastrategies.com" target="_blank" rel="noopener">View Riva Strategies</a>
+      <a class="action" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </main>
+</body>
+</html>

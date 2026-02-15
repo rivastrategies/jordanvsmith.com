@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Smith;Jordan;V.;;
+FN:Jordan V. Smith
+ORG:Riva Strategies
+TITLE:Founder;Fractional Sales & Marketing Director
+TEL;TYPE=CELL,VOICE;VALUE=uri:tel:+1-832-388-4600
+TEL;TYPE=WORK,VOICE;VALUE=uri:tel:+1-832-905-0570
+EMAIL;TYPE=WORK;PREF=1:rivastrategies@gmail.com
+URL;TYPE=WORK:https://rivastrategies.com
+END:VCARD
