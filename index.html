@@ -8,11 +8,14 @@
   <style>
     :root {
       color-scheme: light;
-      --accent: #0b1f3a;
+      --accent: #081d3a;
       --accent-contrast: #ffffff;
-      --secondary: #f1f3f5;
-      --text-primary: #111111;
-      --text-secondary: #4a4a4a;
+      --accent-glow: rgba(8, 29, 58, 0.12);
+      --highlight: #c99a2d;
+      --surface: #ffffff;
+      --surface-soft: #f3f6fb;
+      --text-primary: #0b1f3a;
+      --text-secondary: #4f5b6d;
     }
     * {
       box-sizing: border-box;
@@ -20,19 +23,24 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #ffffff;
+      background: linear-gradient(180deg, var(--surface-soft), #ffffff 55%);
       color: var(--text-primary);
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      padding: 24px 18px;
+      padding: 40px 18px;
     }
     .card {
       width: min(520px, 100%);
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 28px;
+      padding: 36px 32px;
+      background: var(--surface);
+      border-radius: 28px;
+      box-shadow: 0 32px 64px var(--accent-glow);
+      border: 2px solid rgba(201, 154, 45, 0.18);
     }
     .identity {
       display: grid;
@@ -45,50 +53,58 @@
       height: 96px;
       object-fit: cover;
       border-radius: 50%;
+      border: 2px solid rgba(201, 154, 45, 0.65);
+      box-shadow: 0 12px 20px rgba(8, 29, 58, 0.2);
     }
     .identity h1 {
-      font-size: 1.5rem;
-      margin: 0 0 4px;
+      font-size: 1.7rem;
+      margin: 0 0 6px;
+      letter-spacing: 0.01em;
     }
     .identity .role {
       margin: 0;
-      font-size: 1rem;
+      font-size: 0.94rem;
       font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
     .identity .subtext {
-      margin: 8px 0 0;
-      font-size: 0.95rem;
+      margin: 12px 0 0;
+      font-size: 1rem;
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.6;
     }
     .logo {
       display: flex;
       justify-content: flex-start;
+      padding-top: 8px;
     }
     .logo img {
       max-width: 120px;
       max-height: 36px;
       object-fit: contain;
-      opacity: 0.55;
+      opacity: 0.7;
     }
     .actions {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
     }
     .action {
       display: inline-block;
       width: 100%;
-      padding: 14px 18px;
-      border-radius: 12px;
+      padding: 15px 20px;
+      border-radius: 14px;
       text-decoration: none;
       text-align: center;
       font-size: 1rem;
       font-weight: 600;
       letter-spacing: 0.01em;
-      transition: transform 0.1s ease;
-      background: var(--secondary);
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      background: rgba(8, 29, 58, 0.05);
       color: var(--text-primary);
+      border: 1px solid rgba(8, 29, 58, 0.08);
+      box-shadow: 0 10px 16px rgba(8, 29, 58, 0.08);
     }
     .action:active {
       transform: scale(0.98);
@@ -97,19 +113,32 @@
       background: var(--accent);
       color: var(--accent-contrast);
       font-size: 1.05rem;
-      padding: 16px 18px;
+      padding: 18px 20px;
+      border: 0;
+      box-shadow: 0 16px 24px rgba(8, 29, 58, 0.25);
+    }
+    .action[href^="https"] {
+      color: var(--accent);
+    }
+    .action:hover {
+      box-shadow: 0 12px 20px rgba(8, 29, 58, 0.15);
     }
     @media (max-width: 480px) {
       body {
-        padding: 28px 14px;
+        padding: 32px 14px;
       }
       .identity {
-        grid-template-columns: 80px 1fr;
-        gap: 16px;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 18px;
       }
       .identity img {
         width: 80px;
         height: 80px;
+        margin: 0 auto;
+      }
+      .logo {
+        justify-content: center;
       }
     }
   </style>
@@ -120,7 +149,7 @@
       <img src="/assets/jordan.jpg" alt="Portrait of Jordan V. Smith">
       <div>
         <h1>Jordan V. Smith</h1>
-        <p class="role">Founder, Riva Strategies&nbsp;|&nbsp;Fractional Sales &amp; Marketing Director</p>
+        <p class="role">Founder | Riva Strategies | Fractional Sales &amp; Marketing Director</p>
         <p class="subtext">I build and execute revenue growth systems for hospitality, service, and local market leaders.</p>
       </div>
     </section>
